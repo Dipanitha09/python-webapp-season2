@@ -1,0 +1,23 @@
+<body>
+     <div class="border-bottom row" style="margin-bottom:16px; padding-bottom:6px;">
+       <div class="col-9">
+   
+          <div style="color:rgb(120,100,120); margin-bottom:4px;">
+             <h2>{{job['title']}}</h2>
+          </div>
+          <div>
+             <b>Location:</b>{{job['location']}}
+          </div>
+          <div>
+             {% if 'salary' in job %}
+                <div style="margin-bottom:20px">
+                   <b>Salary:</b>{{job['salary']}}
+                </div>   
+            {% endif %} 
+          </div> 
+       </div>
+       <div class="col-3" style="margin-top:20px;">
+          <button type="button" class="btn btn-outline-primary">Primary</button>
+       </div>
+      </div>  
+</body>  

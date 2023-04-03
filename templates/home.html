@@ -2,41 +2,31 @@
 <html>
   <head>
      <title>Python Web Application</title>
+      <meta charset="utf-8">
     <style>
-      h1{
-        font-size:50px;
-        font-family: Roboto;
-        font-weight: normal;
-        color: rgb(100,0,0);
-        text-align: center;
+      .container{
+        max-width: 1200px;
       }
-      #banner{
-        width:100%;
-        height: 1200px;
-        object-fit: cover;
-        
-      }
-    #container{
-      max-width :720px;
-      margin: 0 auto 0 auto;
-      
-    } 
-    .bodytext{
-      font-family: Arial;
-    }  
     </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
   </head>
   <body>
-    <div id="container">
-      <h1>ZYRA</h1>
-      <img id="banner" src="https://pythonwebapplication-3.dipanithad.repl.co/static/alimarel-d-ohbrN01uo-unsplash.jpg">
-      <h2>About ZYRA</h2>
-      <p class="bodytext">A Fashion Brand with wide range of collections right from kids to adults.</p>
-      <h2>POSITION OPEN</h2>
-      <P>TODO - SHOW THE JOBS OPEN HERE</P>
-  <div style="text-align:center;">
-    <button>Contact Us</button>
-    <p>copy right 2023,ZYRA - the fashion brand</p>
-  </div>   
+    <div class="container">
+      <h1  class="text-center">{{company_name}} - The Clothing Brand</h1>
+      <img class="img-fluid" id="banner" src="https://pythonwebapplication-3.dipanithad.repl.co/static/alimarel-d-ohbrN01uo-unsplash.jpg">
+      <h2  class="text-center">About ZYRA</h2>
+      <p class="lead" class="text-center">A Fashion Brand with wide range of collections right from kids to adults.More than 1000 plus latest collection with finite designing.</p>
+      <h2  class="text-center">POSITION OPEN</h2>
+    <div>
+        {% for job in jobs %}
+          {% include 'jobitem.html' %}
+       {% endfor %}
+    </div>
+  <div class="text-center">
+  <button class="btn btn-primary btn-lg">Contact Us</button>
+  <button class="btn btn-primary btn-lg">Help</button>
+</div>
+    <p>copy right 2023,ZYRA - the fashion brand</p> 
   </body>
 </html>
